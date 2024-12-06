@@ -1,0 +1,293 @@
+/* UserList.css
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background: #f8f9fa;
+}
+
+h2, h3 {
+  text-align: center;
+  color: #333;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  background: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+thead {
+  background-color: #007bff;
+  color: white;
+}
+
+thead th {
+  padding: 10px;
+  text-align: left;
+}
+
+tbody td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+button {
+  padding: 5px 10px;
+  margin: 2px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+form {
+  background: #fff;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+form input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+form button {
+  width: 100%;
+  padding: 10px;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+.confirmation {
+  text-align: center;
+  background: #f9f9f9;
+  padding: 15px;
+  margin: 10px auto;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  max-width: 400px;
+}
+
+.confirmation p {
+  margin-bottom: 15px;
+}
+
+@media (max-width: 600px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+
+  tr {
+    margin-bottom: 15px;
+  }
+
+  td {
+    text-align: right;
+    padding-left: 50%;
+    position: relative;
+  }
+
+  td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 10px;
+    font-weight: bold;
+    text-align: left;
+  }
+} */
+.confirmation-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.confirmation-modal button {
+  margin: 10px;
+}
+.save-message {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px;
+  margin-top: 20px;
+  text-align: center;
+}
+/* Existing styles */
+
+/* New styles for user management */
+.user-management-container {
+  font-family: 'Arial', sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.user-management-title {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.user-management-success-message {
+  background-color: #d4edda;
+  color: #155724;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.user-management-search-container {
+  margin-bottom: 20px;
+}
+
+.user-management-search-input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.user-management-search-input:focus {
+  border-color: #007bff;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(0, 123, 255, 0.25);
+  outline: none;
+}
+
+.user-management-table-container {
+  overflow-x: auto;
+}
+
+.user-management-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.user-management-table th,
+.user-management-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.user-management-table th {
+  background-color: #f8f9fa;
+  font-weight: bold;
+  color: #333;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.user-management-row:hover {
+  background-color: #f5f5f5;
+}
+
+.user-management-input,
+.user-management-file-input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.user-management-button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.user-management-save-button {
+  background-color: #28a745;
+  color: white;
+  margin-right: 5px;
+}
+
+.user-management-cancel-button {
+  background-color: #6c757d;
+  color: white;
+}
+
+.user-management-edit-button {
+  background-color: #007bff;
+  color: white;
+  margin-right: 5px;
+}
+
+.user-management-delete-button {
+  background-color: #dc3545;
+  color: white;
+}
+
+.user-management-view-button {
+  background-color: #17a2b8;
+  color: white;
+}
+
+.user-management-button:hover {
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .user-management-table {
+    font-size: 14px;
+  }
+
+  .user-management-table th,
+  .user-management-table td {
+    padding: 8px;
+  }
+
+  .user-management-button {
+    padding: 4px 8px;
+    font-size: 12px;
+  }
+}
+

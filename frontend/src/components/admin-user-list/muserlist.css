@@ -1,0 +1,179 @@
+/* General container styles */
+.payout-container {
+    font-family: 'Roboto', sans-serif;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .payout-title {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* Filters section */
+  .filters {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .filter-label {
+    font-weight: 600;
+    color: #555;
+  }
+  
+  .filter-input,
+  .filter-select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border 0.3s;
+  }
+  
+  .filter-input:focus,
+  .filter-select:focus {
+    border-color: #007bff;
+  }
+  
+  /* Table styles */
+  .payout-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .table-header {
+    background-color: #007bff;
+    color: white;
+    font-weight: 600;
+    text-align: left;
+    padding: 12px;
+  }
+  
+  .table-row {
+    transition: background-color 0.3s;
+  }
+  
+  .table-row:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .table-cell {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  .actions-cell {
+    display: flex;
+    gap: 10px;
+  }
+  
+  /* Buttons */
+  .btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .btn:hover {
+    transform: translateY(-2px);
+  }
+  
+  .edit-btn {
+    background-color: #4caf50;
+    color: white;
+  }
+  
+  .edit-btn:hover {
+    background-color: #45a049;
+  }
+  
+  .delete-btn {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  .delete-btn:hover {
+    background-color: #e53935;
+  }
+  
+  .save-btn {
+    background-color: #2196f3;
+    color: white;
+  }
+  
+  .save-btn:hover {
+    background-color: #1e88e5;
+  }
+  
+  .cancel-btn {
+    background-color: #9e9e9e;
+    color: white;
+  }
+  
+  .cancel-btn:hover {
+    background-color: #757575;
+  }
+  
+  .test-next-month-btn {
+    background-color: #ff9800;
+    color: white;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .test-next-month-btn:hover {
+    background-color: #fb8c00;
+  }
+  
+  /* Status select and input */
+  .status-select,
+  .payout-input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border 0.3s;
+  }
+  
+  .status-select:focus,
+  .payout-input:focus {
+    border-color: #007bff;
+  }
+  
+  /* Table responsiveness */
+  @media (max-width: 768px) {
+    .payout-table {
+      font-size: 14px;
+    }
+  
+    .btn {
+      padding: 6px 12px;
+      font-size: 12px;
+    }
+  
+    .actions-cell {
+      flex-direction: column;
+      gap: 5px;
+    }
+  }
+  

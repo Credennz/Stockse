@@ -1,0 +1,17 @@
+# Ignore node_modules directory
+node_modules/
+
+# Ignore log files
+*.log
+
+# Ignore environment variable files
+.env
+
+# Ignore specific files
+config.json
+
+# Ignore all files in the temp directory
+temp/
+
+# Ignore all .DS_Store files (macOS)
+.DS_Store
