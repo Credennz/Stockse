@@ -301,7 +301,7 @@
   object-fit: contain;
 }
 .ud-chart-container {
-  height: 300px;
+  max-height: 300px;
 }
 
 .ud-notice-board {
@@ -706,7 +706,7 @@
       min-width: 600px;
   }
   .ud-mpcontainer{
-      width: 87%;
+      width: 88%;
   }
   .ud-notice-board {
       width: 87%;

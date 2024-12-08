@@ -224,18 +224,31 @@ app.put("/api/users/:id", upload.single("agreementFile"), (req, res) => {
 
 
 // API: Delete a user
+// API: Delete a user
 app.delete("/api/users/:id", (req, res) => {
   const userId = req.params.id;
-  const query = "DELETE FROM userdata WHERE id = ?";
-  db.query(query, [userId], (err, result) => {
+
+  // First, delete the related records in monthly_payouts
+  const deletePayoutsQuery = "DELETE FROM monthly_payouts WHERE user_id = ?";
+  db.query(deletePayoutsQuery, [userId], (err) => {
     if (err) {
-      console.error("Error deleting user:", err);
-      return res.status(500).json({ error: "Failed to delete user." });
+      console.error("Error deleting related payouts:", err);
+      return res.status(500).json({ error: "Failed to delete related payouts." });
     }
 
-    res.status(200).json({ message: "User deleted successfully." });
+    // Now, delete the user from userdata
+    const query = "DELETE FROM userdata WHERE id = ?";
+    db.query(query, [userId], (err, result) => {
+      if (err) {
+        console.error("Error deleting user:", err);
+        return res.status(500).json({ error: "Failed to delete user." });
+      }
+
+      res.status(200).json({ message: "User and related payouts deleted successfully." });
+    });
   });
 });
+
 
 // API: User Login
 app.post("/api/login", (req, res) => {
@@ -319,7 +332,7 @@ app.get('/api/payoutssdata', (req, res) => {
 // **Add New User and Create Payout Entry**
 
 // Populate monthly_payouts table from userdata
-app.post("/api/populate-payouts-test-next-month", (req, res) => {
+app.post("/api/populate-payouts", (req, res) => {
   const nextMonthDate = new Date();
   nextMonthDate.setMonth(nextMonthDate.getMonth() + 1);
 

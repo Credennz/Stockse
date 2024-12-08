@@ -71,23 +71,7 @@ const UserNews = () => {
 
         fetchNews();
     }, []);
-    // const fetchDashboardData = async () => {
-    //     try {
-    //       const response = await axios.get(
-    //         `http://localhost:5000/user-dashboard/${userId}`
-    //       );
-    //       setDashboardData(response.data);
-    //       setIsLoading(false);
-    //     } catch (err) {
-    //       setError(
-    //         err.response?.data?.message || "Failed to fetch dashboard data"
-    //       );
-    //       setIsLoading(false);
-    //     }
-    //   };
-  
-    //   fetchDashboardData();
-    // }, [navigate]);
+   
   
     return (
         <div className="dashboard">
@@ -171,35 +155,7 @@ const UserNews = () => {
                             </div>
                         </div>
                         </div>
-                {/* <div className="user-container">
-                    <div className="user-head">
-                        <h4>Hello {dashboardData?.userInfo?.name} 👋🏼</h4>
-                        <div className="udate">
-                            <span className="udate-icon">📅</span>
-                            <span className="udate-label">Invested Month</span>
-                            <span className="udate-value" id="currentDate">{currentDate}</span>
-                        </div>
-                    </div>
-                    <section className="intro-section">
-                        <button className="arrow-button">
-                            <span className="arrow-icon">‹</span>
-                        </button>
-                        <div className="intro-text">
-                            <p><h5><b>Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto de un sitio mientras que mira su diseño</b></h5></p>
-                        </div>
-                    </section>
-                    <section className="user-content">
-                        <h4>H1 Heading</h4>
-                        <p><b>Lorem ipsum dolor sit amet. Sed internos magnam qui voluptatibus atque et rerum fugit eum error nihil ad unde quidem eos eveniet nobis aut ipsa labore. Qui dolorem voluptatem id dolor quae eum earum enim aut velit doloribus et quis natus.</b></p>
-                        <p><b>Sed harum dolorum quo corporis voluptate et ipsa quia et eius porro a cupiditate sunt non tenetur incidunt ut consectetur iste. A aperiam blanditiis est reprehenderit sunt est tempore consectetur! Cum incidunt vero id eveniet dolor eos pariatur nihil nam error consequuntur rem cumque corrupti qui rerum deserunt.</b></p>
-                        <p><b>Et dolor nisi qui tempore molestias ad quidem dolores. Aut quod rerum vel tempora ipsa qui neque suscipit qui cumque sunt vel natus perspiciatis qui commodi repellat et facilis saepe.</b></p><br /><br />
-                        <h4>H2 Heading</h4>
-                        <button className="image-button">🖼️</button>
-                        <p><b>Lorem ipsum dolor sit amet. Sed internos magnam qui voluptatibus atque et rerum fugit eum error nihil ad unde quidem eos eveniet nobis aut ipsa labore. Qui dolorem voluptatem id dolor quae eum earum enim aut velit doloribus et quis natus.</b></p>
-                        <p><b>Sed harum dolorum quo corporis voluptate et ipsa quia et eius porro a cupiditate sunt non tenetur incidunt ut consectetur iste. A aperiam blanditiis est reprehenderit sunt est tempore consectetur! Cum incidunt vero id eveniet dolor eos pariatur nihil nam error consequuntur rem cumque corrupti qui rerum deserunt.</b></p>
-                        <p><b>Et dolor nisi qui tempore molestias ad quidem dolores. Aut quod rerum vel tempora ipsa qui neque suscipit qui cumque sunt vel natus perspiciatis qui commodi repellat et facilis saepe.</b></p>
-                    </section>
-                </div> */}
+                
             </main>
         </div>
     );

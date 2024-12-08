@@ -18,6 +18,7 @@ export default function Home() {
     totalInvestment: 0,
     totalPayout: 0,
   });
+  const [news, setNews] = useState([]);
 
   // logout 
   const navigate = useNavigate();
@@ -145,6 +146,24 @@ export default function Home() {
       "Retail sales data exceeds expectations, boosting consumer goods stocks."
     ];
 
+    useEffect(() => {
+      const fetchNews = async () => {
+        try {
+          const response = await axios.get('http://localhost:5000/api/new');
+          console.log('Fetched news from API (limit):', response.data);
+  
+          if (response.data && response.data.length > 0) {
+            setNews(response.data); // Update state with the fetched data
+          } else {
+            console.log('No data received from the API');
+          }
+        } catch (error) {
+          console.error('Error fetching news:', error);
+        }
+      };
+  
+      fetchNews();
+    }, []);
     const monthlyData = [
       { month: 'Jan', percentage: 45 },
       { month: 'Feb', percentage: 55 },
@@ -346,11 +365,15 @@ export default function Home() {
               </header>
               <div className="notice-board__content">
                 <div className="notice-board__list">
-                  {notices.map((notice, index) => (
-                    <div key={index} className="notice-item">
-                      <p className="notice-item__text">{notice}</p>
-                    </div>
-                  ))}
+                {news && news.length > 0 ? (
+      news.map((item, idx) => (
+        <div key={item.id || idx} className="ud-news-card">
+          <div className="ud-news-title">{item.title}</div>
+        </div>
+      ))
+    ) : (
+      <p>No news available.</p>
+    )}
                 </div>
                 <div className="notice-board__nav">
                   {notices.map((_, index) => (

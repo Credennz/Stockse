@@ -1,0 +1,19 @@
+1 BLog cotent   25+ 
+2 Terms and conditions
+Privacy Policy
+costomer Policy  if clicked then any policy open  
+
+3.social media link 
+
+4 . sevivice section (Influencers and Collaborations) 2 card  zip file
+
+
+
+   blog >>>
+
+  title: "AI in Web Design",
+  date: "Jun 27, 2024",
+  content: "How artificial intelligence is shaping the future of web     design.",
+  author: "Soocily",
+  image: "svg",
+  
